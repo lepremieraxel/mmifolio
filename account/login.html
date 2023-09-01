@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <!-- META -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- LINK -->
+    <link rel="stylesheet" href="/src/css/main.css">
+    <link rel="stylesheet" href="/src/css/account.css">
+    <!-- TITLE -->
+    <title>mmifolio</title>
+  </head>
+  <body class="account">
+    <header>
+      <h1 class="logo">
+        <a href="/"><span class="title-bold">mmi</span>folio</a>
+      </h1>
+    </header>
+    <main>
+      <h2>Se connecter</h2>
+      <form action="" method="post">
+        <div class="input-container">
+          <label for="email">Nom d'utilisateur ou adresse email*</label>
+          <div class="special-input">
+            <span>@</span>
+            <input type="text" placeholder="nomdutilisateur ou prenom.nom@iut-tarbes.fr" name="email" id="email">
+          </div>
+        </div>
+        <div class="input-container">
+          <label for="passwd">Mot de passe*</label>
+          <div class="special-input">
+            <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM5 10V20H19V10H5ZM11 14H13V16H11V14ZM7 14H9V16H7V14ZM15 14H17V16H15V14ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16Z"></path></svg></span>
+            <input type="password" name="passwd" id="passwd" placeholder="••••••••••••">
+          </div>
+        </div>
+        <div class="cta cta-account">Se connecter</div>
+      </form>
+      <div class="link-line">
+        <p>Tu n'es pas encore membre ? <a href="" class="link-gradient link-hover">S'inscrire.</a></p>
+        <a href="" class="link-hover">Mot de passe oublié ?</a>
+      </div>
+    </main>
+  </body>
+</html>

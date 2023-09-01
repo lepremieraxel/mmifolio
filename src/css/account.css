@@ -1,0 +1,124 @@
+:root{
+  --acc-gradient: linear-gradient(30deg, var(--blue), var(--pink) 90%);
+}
+
+.account{
+  display: flex;
+  justify-content: space-between;
+  margin-left: 30vw;
+}
+.account header{
+  background: var(--acc-gradient);
+  height: 100vh;
+  max-width: 30vw;
+  padding: 2vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+.account .logo a{
+  color: var(--white);
+  font-size: 3rem;
+}
+.account main{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 3rem;
+}
+.account main h2{
+  font-size: 3rem;
+}
+.account form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  gap: 2rem;
+}
+.form-line{
+  display: flex;
+  width: 100%;
+  gap: 2rem;
+}
+.input-container{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: .7rem;
+}
+.input-container input{
+  width: 100%;
+  border: 2px solid var(--black);
+  font-size: 1.2rem;
+  padding: .6rem;
+  border-radius: 8px;
+  font-family: Urbanist, sans-serif;
+  outline: none;
+}
+.input-container label{
+  font-size: 2rem;
+  font-weight: 500;
+}
+.avatar-preview{
+  width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  align-self: end;
+}
+.avatar-preview img{
+  width: 30%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  object-position: center center;
+  border-radius: 999px;
+}
+.special-input{
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--black);
+  border-radius: 8px;
+  overflow: hidden;
+}
+.special-input span{
+  padding: .6rem;
+  background: #ddd;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.special-input input{
+  border: none;
+}
+.special-input input[type=file]{
+  display: none;
+}
+.file-label{
+  font-size: 1.2rem !important;
+  padding: .6rem;
+  cursor: pointer;
+  width: 100%;
+}
+.input-container select{
+  width: 100%;
+  font-size: 1.2rem;
+  padding: .6rem;
+  border-radius: 8px;
+  border: 2px solid var(--black);
+  background: transparent;
+  cursor: pointer;
+}
+.cta-account{
+  border-radius: 10px;
+  font-size: 1.5rem;
+  cursor: pointer;
+  border: none;
+}
+.link-line{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
