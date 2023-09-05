@@ -10,11 +10,19 @@ RewriteRule ^signup/$ account/signup.html [L]
 RewriteRule ^discover$ pages/discover.php [L]
 RewriteRule ^discover/$ pages/discover.php [L]
 
-RewriteRule ^category$ pages/category.php [L]
-RewriteRule ^category/$ pages/category.php [L]
+RewriteRule ^categories$ pages/categories.php [L]
+RewriteRule ^categories/$ pages/categories.php [L]
+
+RewriteRule ^category/([^/]+)$ pages/category.php?name=$1 [L]
+RewriteRule ^category/$ /404/ [L]
+RewriteRule ^category$ /404/ [L]
 
 RewriteRule ^archives$ pages/archives.php [L]
 RewriteRule ^archives/$ pages/archives.php [L]
+
+RewriteRule ^year/([^/]+)$ pages/year.php?name=$1 [L]
+RewriteRule ^year/$ /404/ [L]
+RewriteRule ^year$ /404/ [L]
 
 RewriteRule ^add$ pages/add.php [L]
 RewriteRule ^add/$ pages/add.php [L]

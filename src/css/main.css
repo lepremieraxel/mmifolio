@@ -221,6 +221,10 @@ main{
 main h2{
   margin-bottom: 1rem;
 }
+.galery-container{
+  width: 100%;
+  margin-bottom: 3rem;
+}
 .galery{
   display: grid;
   grid-template-columns: repeat(4, 1fr);

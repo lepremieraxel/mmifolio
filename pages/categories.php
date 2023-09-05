@@ -17,6 +17,8 @@
     </footer>
     <?php include($root."src/includes/scriptjs.html") ?>
     <script src="/src/js/displayGalery.js"></script>
-    <script>window.onload = displayGalery(4, 'all', 'all', 'archives')</script>
+    <script>
+      window.onload = displayGalery(8, 'all', 'all', 'category')
+    </script>
   </body>
 </html>

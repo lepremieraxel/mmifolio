@@ -25,7 +25,7 @@
     <?php include($root."src/includes/scriptjs.html") ?>
     <script src="/src/js/displayGalery.js"></script>
     <script>
-      window.onload = displayGalery(8, 'all', 'all', false)
+      window.onload = displayGalery(8, 'all', 'all', 'simple')
     </script>
   </body>
 </html>

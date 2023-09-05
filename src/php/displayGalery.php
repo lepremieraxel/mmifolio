@@ -2,10 +2,11 @@
 
 require_once '../config/config.php';
 
-if(isset($_POST['nb']) && isset($_POST['category']) && isset($_POST['year'])){
+if(isset($_POST['nb']) && isset($_POST['category']) && isset($_POST['year']) && isset($_POST['type'])){
   $nb = $_POST['nb'];
   $category = $_POST['category'];
   $year = $_POST['year'];
+  $type = $_POST['type'];
 
   if($category == 'all' && $year == 'all'){
     $where = '';
@@ -17,9 +18,15 @@ if(isset($_POST['nb']) && isset($_POST['category']) && isset($_POST['year'])){
     $where = 'WHERE category = "'.$category.'"';
   }
 
+  if($type == 'discover'){
+    $orderBy = 'RAND()';
+  } else {
+    $orderBy = 'created_at DESC';
+  }
+
   $arr = [];
 
-  $request = $db->prepare('SELECT token, token_user, title, category, miniature FROM creations '.$where.' ORDER BY created_at DESC LIMIT '.$nb);
+  $request = $db->prepare('SELECT token, token_user, title, category, year, miniature FROM creations '.$where.' ORDER BY '.$orderBy.' LIMIT '.$nb);
   $request->execute();
   $data = $request->fetchAll();
   $count = $request->rowCount();
@@ -46,6 +53,4 @@ if(isset($_POST['nb']) && isset($_POST['category']) && isset($_POST['year'])){
       echo json_encode($arr);
     } else echo '{"data":"error"}';
   }
-
-
 }
