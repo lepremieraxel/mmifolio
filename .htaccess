@@ -1,0 +1,31 @@
+Options +FollowSymlinks
+RewriteEngine on
+
+RewriteRule ^login$ account/login.html [L]
+RewriteRule ^login/$ account/login.html [L]
+
+RewriteRule ^signup$ account/signup.html [L]
+RewriteRule ^signup/$ account/signup.html [L]
+
+RewriteRule ^discover$ pages/discover.php [L]
+RewriteRule ^discover/$ pages/discover.php [L]
+
+RewriteRule ^category$ pages/category.php [L]
+RewriteRule ^category/$ pages/category.php [L]
+
+RewriteRule ^archives$ pages/archives.php [L]
+RewriteRule ^archives/$ pages/archives.php [L]
+
+RewriteRule ^add$ pages/add.php [L]
+RewriteRule ^add/$ pages/add.php [L]
+
+RewriteRule ^creation/([^/]+)$ pages/creation.php?token=$1 [L]
+RewriteRule ^creation/$ /404/ [L]
+RewriteRule ^creation$ /404/ [L]
+
+RewriteRule ^profil/([^/]+)$ account/profil.php?username=$1 [L]
+RewriteRule ^profil/$ /404/ [L]
+RewriteRule ^profil$ /404/ [L]
+
+RewriteRule ^404/$ pages/page404.php [L]
+RewriteRule ^404$ pages/page404.php [L]

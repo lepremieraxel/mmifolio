@@ -7,7 +7,7 @@
   justify-content: space-between;
   margin-left: 30vw;
 }
-.account header{
+.account header:not(.not_account){
   background: var(--acc-gradient);
   height: 100vh;
   max-width: 30vw;
@@ -20,7 +20,7 @@
   color: var(--white);
   font-size: 3rem;
 }
-.account main{
+main{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -30,7 +30,7 @@
 .account main h2{
   font-size: 3rem;
 }
-.account form{
+form{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -48,7 +48,7 @@
   flex-direction: column;
   gap: .7rem;
 }
-.input-container input{
+.input-container input, .input-container textarea{
   width: 100%;
   border: 2px solid var(--black);
   font-size: 1.2rem;
@@ -56,6 +56,7 @@
   border-radius: 8px;
   font-family: Urbanist, sans-serif;
   outline: none;
+  resize: vertical;
 }
 .input-container label{
   font-size: 2rem;
@@ -93,7 +94,9 @@
   border: none;
 }
 .special-input input[type=file]{
-  display: none;
+  opacity: 0;
+  position: absolute;
+  z-index: -1;
 }
 .file-label{
   font-size: 1.2rem !important;
@@ -118,7 +121,44 @@
 }
 .link-line{
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
   width: 100%;
+}
+
+.add main h2{
+  text-align: center;
+  font-size: 4rem;
+  font-weight: 500;
+}
+.add .form-line .input-container:first-child{
+  width: 150%;
+}
+.input-file{
+  display: flex;
+  gap: 1rem;
+}
+.img-preview{
+  width: 30%;
+  overflow: hidden;
+}
+.img-preview img, .img-preview video{
+  width: 100%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  object-position: center center;
+  overflow: hidden;
+}
+.miniature-preview{
+  width: 20%;
+}
+.miniature-preview img, .miniature-preview video{
+  aspect-ratio: 1;
+}
+.img-preview-grid{
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
 }

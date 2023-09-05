@@ -80,7 +80,7 @@ form.avatar.oninput = () => {
         form.avatar.parentNode.parentNode.querySelector('small').textContent = 'Taille recommandé : 256x256 pixel. Max : 5Mo. JPG, PNG et WEBP.'
         form.avatar.parentNode.parentNode.querySelector('small').style.color = 'var(--black)'
         form.avatar.parentNode.style.border = '2px solid var(--green)'
-        avatar = `${username.split(' ').join('-')}-${file.name}`
+        avatar = `${username.split(' ').join('-')}-${file.name.split(' ').join('-').toLowerCase()}`
         avatar_file = file
       } else {
         form.avatar.parentNode.parentNode.querySelector('small').textContent = 'La taille maximale de fichier est de 5Mo.'
@@ -156,46 +156,34 @@ form.repasswd.oninput = () => {
 
 btn.onclick = (e) => {
   e.preventDefault()
-  let content = {}
   if(fullname !== null){
-    content.fullname = fullname
     if(promo !== null){
-      content.promo = promo
       if(username !== null){
-        content.username = username
         if(email !== null){
-          content.email = email
           if(passwd !== null){
-            content.passwd = passwd
             if(repasswd !== null){
               if(avatar !== null){
-                content.avatar = avatar
-              } else {
-                content.avatar = null
+                const avatarData = new FormData()
+                avatarData.append('name', avatar)
+                avatarData.append('file', avatar_file)
+                avatarData.append('type', 'avatar')
+                window.fetch('/src/php/uploadFile.php', {method: 'post',body: avatarData}).then(response => response.text()).then(data => {console.log(data);})
               }
               
-              const params = {
-                method: 'post',
-                body: JSON.stringify({
-                  fullname: content.fullname,
-                  promo: content.promo,
-                  username: content.username,
-                  avatar: content.avatar,
-                  email: content.email,
-                  passwd: content.passwd
-                }),
-                headers: {"Content-Type": "application/json"}
-              }
-              window.fetch('/src/php/signupForm.php', params)
-              .then(response => response.text())
-              .then(data => {
-                alert(data['error'])
+              const formData = new FormData()
+              formData.append('fullname', fullname)
+              formData.append('promo', promo)
+              formData.append('username', username)
+              formData.append('email', email)
+              formData.append('passwd', passwd)
+              formData.append('avatar', avatar)
+              window.fetch('/src/php/signupForm.php', {method: 'post', body: formData}).then(response => response.text()).then(data => {
+                if(data !== 'user not insert' || data !== 'code not insert' || data !== 'links not insert'){
+                  sessionStorage.setItem('token', data.split(' ')[2])
+                  location = '/'
+                }
               })
 
-              const avatarData = new FormData()
-              avatarData.append('name', avatar)
-              avatarData.append('avatar', avatar_file)
-              window.fetch('/src/php/uploadAvatar.php', {method: 'post',body: avatarData}).then(response => response.text()).then(data => {alert(data['error'])})
 
             } else {
               form.repasswd.parentNode.style.border = '2px solid var(--red)'

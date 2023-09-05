@@ -160,9 +160,13 @@ header .menu{
   flex-direction: column;
   gap: 1rem;
   padding: 1.5rem 1rem .7rem;
+  box-shadow: 10px 15px 20px rgba(0, 0, 0, .5);
 }
 .profil-btn:is(:hover, :focus) ~ .profil-menu, .profil-menu:is(:hover, :focus){
   display: flex;
+}
+.profil-menu p {
+  font-weight: 500;
 }
 .profil-menu a{
   display: flex;

@@ -8,27 +8,28 @@
     <!-- LINK -->
     <link rel="stylesheet" href="/src/css/main.css">
     <link rel="stylesheet" href="/src/css/account.css">
+    <link rel="stylesheet" href="/src/css/account_responsive.css">
     <!-- TITLE -->
     <title>mmifolio</title>
   </head>
   <body class="account">
     <header>
       <h1 class="logo">
-        <a href="/"><span class="title-bold">mmi</span>folio</a>
+        <a tabindex="1" href="/"><span class="title-bold">mmi</span>folio</a>
       </h1>
     </header>
     <main>
       <h2>S'inscrire</h2>
-      <form action="" method="post" name="signupForm">
+      <form action="" method="post" name="signupForm" enctype="multipart/form-data">
         <div class="form-line">
           <div class="input-container">
             <label for="fullname">Prénom & nom*</label>
-            <input type="text" placeholder="Prénom Nom" id="fullname" name="fullname">
+            <input tabindex="2" type="text" placeholder="Prénom Nom" id="fullname" name="fullname">
             <small></small>
           </div>
           <div class="input-container">
             <label for="promo">Promo*</label>
-            <select name="promo" id="promo">
+            <select tabindex="3" name="promo" id="promo">
               <option value="null">Choisis ta promo</option>
               <option value="1a">1A</option>
               <option value="2a">2A</option>
@@ -42,7 +43,7 @@
             <label for="username">Nom d'utilisateur*</label>
             <div class="special-input">
               <span>@</span>
-              <input type="text" name="username" id="username" placeholder="nomdutilisateur">
+              <input tabindex="4" type="text" name="username" id="username" placeholder="nomdutilisateur">
             </div>
             <small>De 3 à 30 caractères alphanumériques. Ainsi que le point (.) et le tiret bas (_).</small>
           </div>
@@ -51,7 +52,7 @@
             <div class="special-input">
               <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M15 8V4H5V20H19V8H15ZM3 2.9918C3 2.44405 3.44749 2 3.9985 2H16L20.9997 7L21 20.9925C21 21.5489 20.5551 22 20.0066 22H3.9934C3.44476 22 3 21.5447 3 21.0082V2.9918ZM11 9.5C11 10.3284 10.3284 11 9.5 11C8.67157 11 8 10.3284 8 9.5C8 8.67157 8.67157 8 9.5 8C10.3284 8 11 8.67157 11 9.5ZM17.5 17L13.5 10L8 17H17.5Z"></path></svg></span>
               <label for="avatar" class="file-label">Choisis un fichier</label>
-              <input type="file" name="avatar" id="avatar" accept="image/png, image/jpeg, image/webp">
+              <input tabindex="5" type="file" name="avatar" id="avatar" accept="image/png, image/jpeg, image/webp">
             </div>
             <small>Taille recommandé : 256x256 pixel. Max : 5Mo. JPG, PNG et WEBP.</small>
           </div>
@@ -59,7 +60,7 @@
         <div class="avatar-preview"></div>
         <div class="input-container">
           <label for="email">Adresse email*</label>
-          <input type="text" placeholder="prenom.nom@iut-tarbes.fr" name="email" id="email">
+          <input tabindex="6" type="text" placeholder="prenom.nom@iut-tarbes.fr" name="email" id="email">
           <small></small>
         </div>
         <div class="form-line">
@@ -67,7 +68,7 @@
             <label for="passwd">Mot de passe*</label>
             <div class="special-input">
               <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM5 10V20H19V10H5ZM11 14H13V16H11V14ZM7 14H9V16H7V14ZM15 14H17V16H15V14ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16Z"></path></svg></span>
-              <input type="password" name="passwd" id="passwd" placeholder="••••••••••••">
+              <input tabindex="7" type="password" name="passwd" id="passwd" placeholder="••••••••••••">
             </div>
             <small>De 8 à 30 caractères. Minimum 1 minuscule, 1 majuscule, 1 chiffre et 1 symbole (@,?;.:-_!+=).</small>
           </div>
@@ -75,15 +76,15 @@
             <label for="repasswd">Confirmer*</label>
             <div class="special-input">
               <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM5 10V20H19V10H5ZM11 14H13V16H11V14ZM7 14H9V16H7V14ZM15 14H17V16H15V14ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16Z"></path></svg></span>
-              <input type="password" name="repasswd" id="repasswd" placeholder="••••••••••••">
+              <input tabindex="8" type="password" name="repasswd" id="repasswd" placeholder="••••••••••••">
             </div>
             <small></small>
           </div>
         </div>
-        <button class="cta cta-account">S'inscrire</button>
+        <button tabindex="9" class="cta cta-account">S'inscrire</button>
       </form>
       <div class="link-line">
-        <p>Tu as déjà un compte ? <a href="" class="link-gradient link-hover">Se connecter.</a></p>
+        <p>Tu as déjà un compte ? <a tabindex="10" href="/login/" class="link-gradient link-hover">Se connecter.</a></p>
       </div>
     </main>
     <script src="/src/js/signupForm.js"></script>

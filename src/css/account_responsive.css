@@ -1,0 +1,59 @@
+@media screen and (max-width: 1000px) {
+  .account{
+    margin-left: 0;
+  }
+  .account header{
+    height: fit-content;
+    width: fit-content;
+    background: transparent;
+    position: absolute;
+  }
+  .account .logo a{
+    color: var(--black);
+  }
+  .add .form-line .input-container:first-child{
+    width: 100%;
+  }
+  .img-preview{
+    width: 70%;
+  }
+  .miniature-preview{
+    width: 50%;
+  }
+  .img-preview-grid{
+    width: 100%;
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 769px) {
+  .form-line{
+    flex-direction: column;
+  }
+  .avatar-preview{
+    align-self: center;
+    width: 70%;
+  }
+  .link-line{
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
+  }
+  .input-file{
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 450px) {
+  .avatar-preview{
+    width: 100%;
+  }
+  .img-preview{
+    width: 100%;
+  }
+  .miniature-preview{
+    width: 100%;
+  }
+  .img-preview-grid{
+    grid-template-columns: repeat(1, 1fr);
+  }
+}

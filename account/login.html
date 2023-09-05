@@ -8,38 +8,42 @@
     <!-- LINK -->
     <link rel="stylesheet" href="/src/css/main.css">
     <link rel="stylesheet" href="/src/css/account.css">
+    <link rel="stylesheet" href="/src/css/account_responsive.css">
     <!-- TITLE -->
     <title>mmifolio</title>
   </head>
   <body class="account">
     <header>
       <h1 class="logo">
-        <a href="/"><span class="title-bold">mmi</span>folio</a>
+        <a href="/" tabindex="1"><span class="title-bold">mmi</span>folio</a>
       </h1>
     </header>
     <main>
       <h2>Se connecter</h2>
-      <form action="" method="post">
+      <form action="" method="post" name="loginForm">
         <div class="input-container">
-          <label for="email">Nom d'utilisateur ou adresse email*</label>
+          <label for="login">Nom d'utilisateur ou adresse email*</label>
           <div class="special-input">
             <span>@</span>
-            <input type="text" placeholder="nomdutilisateur ou prenom.nom@iut-tarbes.fr" name="email" id="email">
+            <input tabindex="2" type="text" placeholder="nomdutilisateur ou prenom.nom@iut-tarbes.fr" name="login" id="login">
           </div>
+          <small></small>
         </div>
         <div class="input-container">
           <label for="passwd">Mot de passe*</label>
           <div class="special-input">
             <span><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M18 8H20C20.5523 8 21 8.44772 21 9V21C21 21.5523 20.5523 22 20 22H4C3.44772 22 3 21.5523 3 21V9C3 8.44772 3.44772 8 4 8H6V7C6 3.68629 8.68629 1 12 1C15.3137 1 18 3.68629 18 7V8ZM5 10V20H19V10H5ZM11 14H13V16H11V14ZM7 14H9V16H7V14ZM15 14H17V16H15V14ZM16 8V7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7V8H16Z"></path></svg></span>
-            <input type="password" name="passwd" id="passwd" placeholder="••••••••••••">
+            <input tabindex="3" type="password" name="passwd" id="passwd" placeholder="••••••••••••">
           </div>
+          <small></small>
         </div>
-        <div class="cta cta-account">Se connecter</div>
+        <button tabindex="4" class="cta cta-account">Se connecter</button>
       </form>
       <div class="link-line">
-        <p>Tu n'es pas encore membre ? <a href="" class="link-gradient link-hover">S'inscrire.</a></p>
-        <a href="" class="link-hover">Mot de passe oublié ?</a>
+        <p>Tu n'es pas encore membre ? <a tabindex="5" href="/signup/" class="link-gradient link-hover">S'inscrire.</a></p>
+        <a tabindex="6" href="" class="link-hover">Mot de passe oublié ?</a>
       </div>
     </main>
+    <script src="/src/js/loginForm.js"></script>
   </body>
 </html>

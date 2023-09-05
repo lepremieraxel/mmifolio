@@ -10,15 +10,11 @@
       <?php include($root."src/includes/header.html") ?>
     </header>
     <main>
-      <div class="galery-container"></div>
+      <h2>404</h2>
     </main>
     <footer>
       <?php include($root."src/includes/footer.html") ?>
     </footer>
     <?php include($root."src/includes/scriptjs.html") ?>
-    <script src="/src/js/displayGalery.js"></script>
-    <script>
-      window.onload = displayGalery(8, 'all', 'all', 'cat')
-    </script>
   </body>
 </html>
