@@ -322,9 +322,12 @@ main h2{
   cursor: pointer;
 }
 .like-container .like svg{
-  fill: var(--white);
+  stroke: var(--white);
+  stroke-width: 2px;
+  fill: transparent;
 }
 .liked svg{
+  stroke: var(--red) !important;
   fill: var(--red) !important;
 }
 footer{
