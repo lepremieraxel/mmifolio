@@ -1,0 +1,76 @@
+.creation main{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+.close-btn{
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+}
+.flex-line{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.profil{
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.profil span{
+  font-size: 1.4rem;
+}
+.profil img{
+  width: 4rem;
+}
+.main-part{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.title-infos{
+  font-size: 1.4rem;
+}
+.main-part img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 15pt;
+}
+.main-part .description{
+  font-size: 1.4rem;
+  line-height: 1.5;
+}
+.galery-part{
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+.galery-view{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 15pt;
+}
+.galery-selector{
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1rem;
+}
+.galery-selector img{
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 12pt;
+  border: 3px solid var(--white);
+  cursor: pointer;
+}
+.galery-selector img:is(:hover, :focus){
+  border-color: #ccc;
+}
+.galery-selector img.active{
+  border-color: var(--pink);
+}

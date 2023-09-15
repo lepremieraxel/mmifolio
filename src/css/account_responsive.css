@@ -2,7 +2,7 @@
   .account{
     margin-left: 0;
   }
-  .account header{
+  .account header:not(.not_account){
     height: fit-content;
     width: fit-content;
     background: transparent;

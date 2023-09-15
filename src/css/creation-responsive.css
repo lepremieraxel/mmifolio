@@ -1,0 +1,26 @@
+@media screen and (max-width: 900px){
+  .creation main{
+    padding-top: 0;
+  }
+  .profil span{
+    font-size: 1rem !important;
+  }
+  .title-infos{
+    font-size: 1rem !important;
+  }
+  .main-part .description{
+    font-size: 1rem !important;
+    line-height: 1.5;
+  }
+  .galery-selector{
+    display: flex;
+    flex-direction: column;
+  }
+  .galery-selector img{
+    border-radius: 15pt;
+    border: none;
+  }
+  .galery-selector img:first-child{
+    display: none;
+  }
+}

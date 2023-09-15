@@ -37,7 +37,7 @@ body{
   font-size: var(--fs-text);
   font-weight: 400;
   color: var(--black);
-  overflow-x: hidden;
+  overflow-x: hidden !important;
 }
 a{
   text-decoration: none;
@@ -325,6 +325,9 @@ main h2{
   stroke: var(--white);
   stroke-width: 2px;
   fill: transparent;
+}
+.like-container .like-black svg{
+  stroke: var(--black);
 }
 .liked svg{
   stroke: var(--red) !important;
