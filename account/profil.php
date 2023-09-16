@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="/src/css/main.css">
     <link rel="stylesheet" href="/src/css/responsive.css">
     <link rel="stylesheet" href="/src/css/profil.css">
+    <link rel="stylesheet" href="/src/css/profil-responsive.css">
     <title>mmifolio</title>
   </head>
   <body class="profil">
@@ -49,11 +50,25 @@
           <p>Créations likés • 9</p>
         </div>
         <div class="galery">
-          <div class="galery-item"></div>
-          <div class="galery-item"></div>
-          <div class="galery-item"></div>
-          <div class="galery-item"></div>
-          <div class="galery-item"></div>
+          <article class="galery-item galery-add">
+            <a href="/add/" class="cta cta-gradient">Ajouter une création</a>
+          </article>
+          <article class="galery-item">
+            <a href="" class="overlay overlay-user">
+              <img src="/assets/avatar/lepremieraxel-avatar.webp" alt="" class="overlay-user-avatar">
+              <p>• Full Name • Username</p>
+            </a>
+            <a href="">
+              <img src="/assets/miniature/f04e31b678-1693859716220-img3.jpg" alt="" class="item-img">
+            </a>
+            <div class="overlay overlay-line">
+              <a href="" class="overlay-infos">Title • Category</a>
+              <div class="like-container">
+                <p class="like-count">666</p>
+                <a href="" class="like"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24"><path d="M16.5 3C19.5376 3 22 5.5 22 9C22 16 14.5 20 12 21.5C9.5 20 2 16 2 9C2 5.5 4.5 3 7.5 3C9.35997 3 11 4 12 5C13 4 14.64 3 16.5 3Z"></path></svg></a>
+              </div>
+            </div>
+          </article>
         </div>
       </div>
     </main>

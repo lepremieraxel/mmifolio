@@ -2,6 +2,9 @@
   :root{
     --p-x: 2vw;
   }
+  .mobile-only{
+    display: block;
+  }
   .burger{
     display: flex;
     flex-direction: column;

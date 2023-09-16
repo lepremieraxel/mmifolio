@@ -11,6 +11,7 @@
   border-radius: 999px;
   aspect-ratio: 1;
   width: 25%;
+  min-width: 150px;
 }
 .user-avatar img{
   width: 100%;
@@ -24,9 +25,11 @@
 }
 .username-settings{
   display: flex;
+  flex-wrap: wrap;
   align-items: start;
   justify-content: space-between;
   margin-top: 2rem;
+  row-gap: 1rem;
 }
 .fullname-username{
   display: flex;
@@ -86,4 +89,9 @@
 }
 .selector p:is(:hover, :focus), .selector p.active{
   opacity: 1;
+}
+.galery-add{
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
