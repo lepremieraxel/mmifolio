@@ -6,6 +6,7 @@
 .user-profil{
   display: flex;
   gap: 2rem;
+  width: 100%;
 }
 .user-avatar{
   border-radius: 999px;
@@ -22,6 +23,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 100%;
 }
 .username-settings{
   display: flex;
@@ -55,6 +57,10 @@
   display: flex;
   flex-wrap: wrap;
   gap: 1rem;
+}
+.social-links a{
+  display: flex;
+  align-items: center;
 }
 .user-creations{
   display: flex;
